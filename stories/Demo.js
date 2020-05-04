@@ -81,6 +81,11 @@ const NumPadDemo = () => {
                 <NumPad.Number
                   onChange={value => dispatch({ type: 'any.number', value })}
                   position="flex-end"
+                  max={1000}
+                  min={0}
+                  value={0}
+                  decimal={2}
+                  increment={0.01}
                 >
                   <Grid container alignItems="center">
                     <Grid item xs>
