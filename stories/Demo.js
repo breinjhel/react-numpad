@@ -38,6 +38,8 @@ const initialState = {};
 
 const reducer = (state, action) => {
   switch (action.type) {
+    case 'any.number2':
+      return { anyNumber2: action.value };
     case 'any.number':
       return { anyNumber: action.value };
     case 'positive.number':
@@ -77,6 +79,25 @@ const NumPadDemo = () => {
           <CardContent>
             <Typography variant="h5">Number</Typography>
             <Grid container alignItems="center">
+              <Grid item sm xs={12}>
+                <NumPad.Password
+                    onChange={value => dispatch({ type: 'any.number2', value })}
+                    position="flex-end"
+                    max={1000}
+                    min={0}
+                    decimal={2}
+                    increment={0.01}
+                >
+                  <Grid container alignItems="center">
+                    <Grid item xs>
+                      <input type="password" label="Pin" value={state.anyNumber2} />
+                    </Grid>
+                    <Grid item xs>
+                      <Button color="primary">Click me</Button>
+                    </Grid>
+                  </Grid>
+                </NumPad.Password>
+              </Grid>
               <Grid item sm xs={12}>
                 <NumPad.Number
                   onChange={value => dispatch({ type: 'any.number', value })}
