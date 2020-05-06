@@ -107,10 +107,11 @@ const NumPadDemo = () => {
                   value={0}
                   decimal={2}
                   increment={0.01}
+                  disabled
                 >
                   <Grid container alignItems="center">
                     <Grid item xs>
-                      <TextField label="Any number" value={state.anyNumber} />
+                      <TextField disabled={true} label="Any number" value={state.anyNumber} />
                     </Grid>
                     <Grid item xs>
                       <Button color="primary">Click me</Button>
