@@ -83,7 +83,7 @@ const NumPadDemo = () => {
                 <NumPad.Password
                     onChange={value => dispatch({ type: 'any.number2', value })}
                     position="flex-end"
-                    max={1000}
+                    max={9999}
                     min={0}
                     decimal={2}
                     increment={0.01}
